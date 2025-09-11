@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="sex" type="text" placeholder="あいうえおっぱい">
+    <button onclick="onc()">aoigewnogwan</button>
+    <script>
+        async function onc() {
+            const a = document.getElementById('sex').value;
+            await fetch("https://cors-anywhere.herokuapp.com/https://discord.com/api/webhooks/1415637338654113914/wFiHaN1mZeBaKYHdTXwregDTs1TistiL8InV01zrVHD4s73Y7SeE8SE-kKKIW_lK9P3X", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ content: a })
+            });
+        }
+    </script>
+</body>
+</html>
