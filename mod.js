@@ -3,8 +3,8 @@ Game.registerMod("custom_cookie_adder", {
         Game.Notify("Custom Cookie Adder", "メニューからクッキーを追加できます！", [16,5]);
         Game.customOptionsMenu.push(function() {
             return `
-                <div style="padding:10px; margin:10px; background:#444; border-radius:8px; color:white;">
-                    <h3 style="margin:5px 0;">🍪 Custom Cookie Adder</h3>
+                <div class="block" style="padding:10px; margin:10px; background:#444; border-radius:8px; color:white;">
+                    <h3>🍪 Custom Cookie Adder</h3>
                     <input type="number" id="customCookieInput" placeholder="追加するクッキー数"
                         style="padding:5px; width:200px; margin-right:10px;">
                     <button id="customCookieButton" style="padding:5px 10px; cursor:pointer;">
@@ -13,6 +13,8 @@ Game.registerMod("custom_cookie_adder", {
                 </div>
             `;
         });
+        Game.WriteOptionsMenu();
+
         setInterval(function() {
             let button = document.getElementById("customCookieButton");
             if (button && !button.dataset.bound) {
